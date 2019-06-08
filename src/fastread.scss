@@ -1,0 +1,50 @@
+/* fast read origin */
+
+body {
+    font-family: 'M PLUS 1p', 'Ubuntu', 'Arial', 'libra sans' sans-serif;
+}
+
+#stage {
+    font-size: 16px;
+    width: 100%;
+}
+
+#result {
+    box-sizing:content-box;
+    padding: 1rem;
+    border: 1px solid #CCC;
+}
+
+#result p {
+    max-width: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 1.2rem;
+    line-height: 1.2;
+}
+
+#result p span {
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    white-space: nowrap;
+    position: relative;
+}
+
+#stage .hide{
+    display: none;
+}
+
+#stage .show {
+    display: block;
+}
+
+@media (max-width: 772px) {
+    #result {
+        box-sizing:content-box;
+        padding: 0;
+        border: none;
+    }
+    
+}
