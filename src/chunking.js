@@ -52,11 +52,20 @@ export default function chunking( tokens ){
         const token = elm[0];
         const type = elm[1];
 
-        if( independent.includes(type) ){
+        console.log( elm );
+
+        if (beforeType === 'M-p' || beforeType === 'M-c' || beforeType === 'M-cp'){
+            result.push( chunk );
+            chunk = token;
+        }
+        else if( independent.includes(type) ){
             if( beforeType === ''){
                 chunk = token;
             }
-            else if( beforeType === 'P' ){
+            else if( beforeType === 'P' || beforeType === 'M-op' ){
+                chunk += token;
+            }
+            else if( independent.includes(beforeType) && chunk.length < 3 ){
                 chunk += token;
             }
             else{
