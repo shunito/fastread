@@ -3,8 +3,10 @@ export default function dispLines() {
     const fontSize = document.getElementById('fontsizeSelect').value;
     const wordsByLine = document.getElementById('wordsByLineSelect').value;
     const baseLine = document.getElementById('baseLineSelect').value;
+    const vibration = document.getElementById('checkVibration').checked;
     const addTopValue = fontSize / 100 * baseLine;
 
+    console.log( 'v ' ,vibration );
     result.classList.remove('hide');
     result.style.height = "";
     result.style.fontSize = `${fontSize}px`;
@@ -20,7 +22,14 @@ export default function dispLines() {
     let line, lineWords;
     let topPosition = 0;
     let lines = result.querySelectorAll('p');
+
     for (line of lines) {
+
+        // Add vibration!
+        if( vibration ) {
+            line.classList.add('vibration');
+        }
+    
         lineWords = line.querySelectorAll('span');
         for (let elem of lineWords) {
             elem.style.top = `${topPosition}px`;

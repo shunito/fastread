@@ -1,7 +1,8 @@
 /* fast read origin */
 
 body {
-    font-family: 'M PLUS 1p', 'Ubuntu', 'Arial', 'libra sans' sans-serif;
+    font-family: 'BIZ UDPGothic', 'M PLUS 1p', 'Ubuntu', 'Arial', 'libra sans' sans-serif;
+    font-feature-settings: "palt";
 }
 
 #stage {
@@ -48,3 +49,51 @@ body {
     }
     
 }
+
+.vibration span {
+    animation-name: vibration;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    position: relative;
+}
+
+.vibration span:nth-child(4n){
+    animation-delay: 0s;
+}
+
+.vibration span:nth-child(4n+1){
+    animation-delay: 250ms;
+}
+
+.vibration span:nth-child(4n+2){
+    animation-delay: 500ms;
+}
+
+.vibration span:nth-child(4n+3){
+    animation-delay: 750ms;
+}
+
+@keyframes vibration {
+    3% {
+        left : 2px;
+    }  
+    40% {
+        left: 0px;
+    }
+    50% {
+        left: 0px;
+    }
+    54%{
+        left: 2px;
+    }
+    90%{
+        left:0px;
+    }
+    100% {
+        left:0px;
+    }
+  }

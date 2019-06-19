@@ -52,8 +52,6 @@ export default function chunking( tokens ){
         const token = elm[0];
         const type = elm[1];
 
-        console.log( elm );
-
         if (beforeType === 'M-p' || beforeType === 'M-c' || beforeType === 'M-cp'){
             result.push( chunk );
             chunk = token;
