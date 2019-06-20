@@ -343,7 +343,7 @@ h5.u-no-margin--bottom, .u-no-margin--bottom.p-heading--five, h6.u-no-margin--bo
 
 /* fast read origin */
 body {
-  font-family: 'BIZ UDPGothic', 'M PLUS 1p', 'Ubuntu', 'Arial', 'libra sans' sans-serif;
+  font-family: "BIZ UDPGothic", "M PLUS 1p", "Ubuntu", "Arial", "libra sans" sans-serif;
   font-feature-settings: "palt"; }
 
 #stage {
@@ -381,6 +381,9 @@ body {
     box-sizing: content-box;
     padding: 0;
     border: none; } }
+
+#result p.vibration {
+  line-height: 1.6; }
 
 .vibration span {
   animation-name: vibration;
